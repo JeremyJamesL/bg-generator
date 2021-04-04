@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background generator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="heading">Background Generator_</h1>
+
+        <div class="controls">
+
+            <div class="control-group">
+                <input type="color" class="color-picker color-picker__one" value="#fff">
+            </div>
+
+            <div class="control-group">
+                <input type="color" class="color-picker color-picker__two" value="#fff">
+            </div>
+
+            <div class="control-group">
+                <label for="gradient-angle">Gradient angle_</label> 
+                <input name ="gradient-angle" type="range" min="1" max="360" step="10" class="range-picker">
+            </div>
+
+            <div class="control-group">
+                <label for="gradient-angle">Opacity_</label> 
+                <input type="range" min="0" max="1" step=".01" class="opacity-picker">
+            </div>
+
+            <div class="control-group control-group__bg"></div>
+
+
+            <div class="bg-selector">
+                <div class="bg bg--jigsaw" data-bg="jigsaw"></div>
+                <div class="bg bg--invitation" data-bg="invitation"></div>
+                <div class="bg bg--overcast" data-bg="overcast"></div>
+                <div class="bg bg--topography" data-bg="topography"></div>
+                <div class="bg bg--cutout" data-bg="cutout"></div>
+                <div class="bg bg--overcast" data-bg="overcast"></div>
+                <div class="bg bg--topography" data-bg="topography"></div>
+                <div class="bg bg--cutout" data-bg="cutout"></div>
+                <div class="bg bg--topography" data-bg="topography"></div>
+                <div class="bg bg--cutout" data-bg="cutout"></div>
+            </div>
+
+        </div>
+
+    </header>
+    <footer>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

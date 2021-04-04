@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    /* background-image: linear-gradient(to right, green, red); */
+    font-size: 62.5%;
+    font-family: "Roboto Mono", monospace;
+}
+
+.header {
+    max-width: 120rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.heading {
+    font-size: 2rem;
+    color: #fff;
+    background-color: black;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    line-height: 1;
+}
+
+.controls {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.control-group__bg {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url('/img/jigsaw-bg.png');
+    background-size: cover;
+}
+
+
+.bg-selector {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    display: none;
+    background-color: white;
+}
+
+.bg-selector--show {
+    display: flex;
+}
+
+.bg {
+    height: 60px;
+    width: 60px;
+    border: 4px solid black;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 5px;
+}
+
+.bg:not(:last-child) {
+    margin-right: 5px;
+}
+
+.bg--jigsaw {
+    background-image: url('img/jigsaw-bg.png');
+}
+
+.bg--invitation {
+    background-image: url('img/formal-invitation-bg.png');
+}
+
+
+.bg--overcast {
+    background-image: url('img/overcast-bg.png');
+}
+
+
+.bg--topography {
+    background-image: url('img/topography-bg.png');
+}
+
+
+.bg--cutout {
+    background-image: url('img/cutout-bg.png');
+}
+
+
+
+
+.controls > *:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+-webkit-color-swatch {
+    border-radius: 100%;
+}
