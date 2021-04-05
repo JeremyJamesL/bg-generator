@@ -11,15 +11,22 @@ body, html {
 }
 
 body {
-    /* background-image: linear-gradient(to right, green, red); */
     font-size: 62.5%;
     font-family: "Roboto Mono", monospace;
+    background-repeat: repeat;
 }
 
 .header {
     max-width: 120rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1006px) {
+    .header {
+        width: 100%;
+    }
 }
 
 
@@ -32,21 +39,71 @@ body {
     line-height: 1;
 }
 
+.toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .heading {
+        text-align: center;
+    }
+} 
+
+
+@media screen and (max-width: 1006px) {
+    .heading {
+        display: block;
+        width: 100%;
+    }
+
+    .controls {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+    }
+    .control-group {
+        margin-right: 0px!important;
+    }
+    .toggle {
+        display: inline;
+    }
+} 
+
 .controls {
     background-color: black;
     color: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     padding: 1rem 1.5rem;
     position: relative;
 }
 
+.controls--hide {
+    display: none;
+}
+
+.controls > *:not(:last-child) {
+    margin-right: 1.5rem;
+}
 
 .control-group {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 600px) {
+    .control-group {
+        margin-bottom: 10px;
+    }
+} 
 
 .control-group__bg {
     height: 40px;
@@ -55,6 +112,7 @@ body {
     border-radius: 50%;
     background-image: url('/img/jigsaw-bg.png');
     background-size: cover;
+    cursor: pointer;
 }
 
 
@@ -84,6 +142,7 @@ body {
     background-size: cover;
     background-position: center center;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .bg:not(:last-child) {
@@ -94,8 +153,12 @@ body {
     background-image: url('img/jigsaw-bg.png');
 }
 
-.bg--invitation {
-    background-image: url('img/formal-invitation-bg.png');
+.bg--topography {
+    background-image: url('img/topography-bg.png');
+}
+
+.bg--piano-man {
+    background-image: url('img/piano-man-bg.png');
 }
 
 
@@ -104,9 +167,14 @@ body {
 }
 
 
-.bg--topography {
-    background-image: url('img/topography-bg.png');
+.bg--yyy {
+    background-image: url('img/yyy-bg.png');
 }
+
+.bg--eyes {
+    background-image: url('img/eyes-bg.png');
+}
+
 
 
 .bg--cutout {
@@ -114,11 +182,6 @@ body {
 }
 
 
-
-
-.controls > *:not(:last-child) {
-    margin-right: 1.5rem;
-}
 
 -webkit-color-swatch {
     border-radius: 100%;

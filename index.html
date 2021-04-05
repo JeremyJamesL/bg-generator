@@ -9,18 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-image:linear-gradient(95deg,  rgba(34,193,195, 0.8), rgba(253,187,45,0.8)), url('img/jigsaw.svg');">
     <header class="header">
-        <h1 class="heading">Background Generator_</h1>
+        <h1 class="heading">Background Generator_<br><span class="toggle" onclick="controlToggle()">&#9207;</span></h1>
+        
 
         <div class="controls">
-
+            
             <div class="control-group">
-                <input type="color" class="color-picker color-picker__one" value="#fff">
+                <input type="color" class="color-picker color-picker__one" value="#22C1C3">
             </div>
 
             <div class="control-group">
-                <input type="color" class="color-picker color-picker__two" value="#fff">
+                <input type="color" class="color-picker color-picker__two" value="#FDBB2D">
             </div>
 
             <div class="control-group">
@@ -38,15 +39,12 @@
 
             <div class="bg-selector">
                 <div class="bg bg--jigsaw" data-bg="jigsaw"></div>
-                <div class="bg bg--invitation" data-bg="invitation"></div>
+                <div class="bg bg--piano-man" data-bg="piano-man"></div>
                 <div class="bg bg--overcast" data-bg="overcast"></div>
                 <div class="bg bg--topography" data-bg="topography"></div>
                 <div class="bg bg--cutout" data-bg="cutout"></div>
-                <div class="bg bg--overcast" data-bg="overcast"></div>
-                <div class="bg bg--topography" data-bg="topography"></div>
-                <div class="bg bg--cutout" data-bg="cutout"></div>
-                <div class="bg bg--topography" data-bg="topography"></div>
-                <div class="bg bg--cutout" data-bg="cutout"></div>
+                <div class="bg bg--eyes" data-bg="eyes"></div>
+                <div class="bg bg--yyy" data-bg="yyy"></div>
             </div>
 
         </div>

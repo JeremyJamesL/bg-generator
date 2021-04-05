@@ -10,7 +10,8 @@ const controls = document.querySelector('.controls');
 
 
 // Set defaults
-let gradColors = ['rgba(34,193,195,0.8)', 'rgba(253,187,45,0.8)'];
+let gradColor1 = 'rgba(34,193,195,0.8)';
+let gradColor2 = 'rgba(253,187,45,0.8)';
 let gradAngle = 90;
 let gradOpacity = 0.6;
 let img = "jigsaw";
@@ -27,21 +28,21 @@ function hexToRGB(hex) {
 
 function updateColors(el) {
     if(el.classList.contains('color-picker__one')) {
-        gradColors[0] = `rgba(${hexToRGB(el.value)}, ${gradOpacity})`;
+        gradColor1 = `rgba(${hexToRGB(el.value)}, ${gradOpacity})`;
     } else {
-        gradColors[1] = `rgba(${hexToRGB(el.value)}, ${gradOpacity})`;
+        gradColor2 = `rgba(${hexToRGB(el.value)}, ${gradOpacity})`;
     }
 }
 
 function colorControl() {
     updateColors(this);
-    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColors[0]}, ${gradColors[1]}), url('img/${img}.svg')`;
+    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColor1}, ${gradColor2}), url('img/${img}.svg')`;
 }
 
 
 function rangeControl() {
     gradAngle = this.value;
-    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColors[0]}, ${gradColors[1]}), url('img/${img}.svg')`;
+    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColor1}, ${gradColor2}), url('img/${img}.svg')`;
 }
 
 function toggleBgSelector() {
@@ -50,20 +51,21 @@ function toggleBgSelector() {
 
 function bgControl() {
     img = this.dataset.bg;
-    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColors[0]}, ${gradColors[1]}), url('img/${img}.svg')`;
+    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColor1}, ${gradColor2}), url('img/${img}.svg')`;
 }
 
 function opacityControl() {
+    // Need to find a better way to do this 
     gradOpacity = `${this.value}`;
-    gradColors.forEach(function(color, index) {
-        color = color.split(",");
-        color.pop();
-        color.push(` ${gradOpacity}`);
-        color = `${color.join()})`;
-        gradColors[index] = color;
-    });
-    console.log(gradColors);
-    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColors[0]}, ${gradColors[1]}), url('img/${img}.svg')`;
+    gradColor1 = gradColor1.split(",");
+    gradColor1.pop();
+    gradColor1.push(` ${gradOpacity}`);
+    gradColor1 = `${gradColor1.join()})`;
+    gradColor2 = gradColor2.split(",");
+    gradColor2.pop();
+    gradColor2.push(` ${gradOpacity}`);
+    gradColor2 = `${gradColor2.join()})`;
+    docBody.style.backgroundImage = `linear-gradient(${gradAngle}deg, ${gradColor1}, ${gradColor2}), url('img/${img}.svg')`;
 }
 
 
